@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--COLOR-LRED: hsl(0, 100%, 67%);
+	--COLOR-ORANGEY-YELLOW: hsl(39, 100%, 56%);
+	--COLOR-GREEN-TEAL: hsl(166, 100%, 37%);
+	--COLOR-COBALT-BLUE: hsl(234, 85%, 45%);
+
+	--COLOR-DGRAY-BLUE: hsl(224, 30%, 27%);
+	--COLOR-LLAVENDER: hsl(241, 100%, 89%);
+	--COLOR-PALE-BLUE: hsl(221, 100%, 96%);
+	--COLOR-WHITE: hsl(0, 0%, 100%);
+
+	/* GRADIENTS */
+	--GRADIENT-LSLATE-BLUE: hsl(252, 100%, 67%);
+	--GRADIENT-LROYAL-BLUE: hsl(241, 81%, 54%);
+
+	--GRADIENT-VIOLET-BLUE: hsl(256, 72%, 46%, 1);
+	--GRADIENT-PERSIAN-BLUE: rgb(36, 33, 202, 0);
+
+	/* FONTS */
+	--FS: 18px;
+}
+
+body {
+	background-color: var(--COLOR-PALE-BLUE);
+	font-family: "Hanken Grotesk", sans-serif;
+	font-size: 18px;
+	/* min-height: 100vh; */
+	/* It can cause spare spaces at the top in mobile views */
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-card {
+	background-color: var(--COLOR-WHITE);
+	border-radius: 1.5rem;
+	width: 90vw;
+	max-width: 800px;
+	height: 425px;
+	margin: 20px;
+	display: flex;
+}
+
+.left-wing {
+	border-radius: 1.5rem;
+	background: linear-gradient(
+		to bottom,
+		var(--GRADIENT-LSLATE-BLUE) 0%,
+		var(--GRADIENT-LROYAL-BLUE) 100%
+	);
+	padding: 40px;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex: 1;
+}
+
+.right-wing {
+	flex: 1;
+	padding: 30px;
+}
+
+.your-result-title {
+	color: var(--COLOR-LLAVENDER);
+	margin-bottom: 25px;
+}
+
+.cycle-shape {
+	background: linear-gradient(
+		to bottom,
+		var(--GRADIENT-VIOLET-BLUE) 0%,
+		var(--GRADIENT-PERSIAN-BLUE) 100%
+	);
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin-bottom: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-circle {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+li:first-of-type {
+	color: var(--COLOR-WHITE);
+	font-size: 60px;
+	font-weight: 800;
+	line-height: 50px;
+}
+
+li:last-of-type {
+	color: hsl(241, 100%, 89%, 0.5);
+}
+
+.oral-result {
+	color: var(--COLOR-WHITE);
+	margin-bottom: 10px;
+}
+
+.oral-description {
+	color: hsl(241, 100%, 89%, 0.7);
+	text-align: center;
+}
+
+.summary-title {
+	margin-bottom: 20px;
+}
+
+.reaction-box,
+.memory-box,
+.verbal-box,
+.visual-box {
+	border-radius: 0.5rem;
+	height: 47px;
+	margin-bottom: 15px;
+	padding: 20px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.reaction-string,
+.memory-string,
+.verbal-string,
+.visual-string {
+	display: flex;
+	gap: 8px;
+}
+
+.reaction-bold-result,
+.memory-bold-result,
+.verbal-bold-result,
+.visual-bold-result {
+	color: black;
+}
+
+.reaction-box {
+	background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+/* Opacity affects text within the box */
+.reaction-string {
+	color: var(--COLOR-LRED);
+}
+
+.reaction-result {
+	color: hsl(241, 100%, 89%, 0.7);
+}
+
+.memory-box {
+	background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.memory-string {
+	color: var(--COLOR-ORANGEY-YELLOW);
+}
+
+.memory-result {
+	color: hsl(241, 100%, 89%, 0.7);
+}
+
+.verbal-box {
+	background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.verbal-string {
+	color: var(--COLOR-GREEN-TEAL);
+}
+
+.verbal-result {
+	color: hsl(241, 100%, 89%, 0.7);
+}
+
+.visual-box {
+	background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.visual-string {
+	color: var(--COLOR-COBALT-BLUE);
+}
+
+.visual-result {
+	color: hsl(241, 100%, 89%, 0.7);
+}
+
+.button-continue {
+	background-color: var(--COLOR-DGRAY-BLUE);
+	border-radius: 2rem;
+	color: var(--COLOR-WHITE);
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.button-continue:hover {
+	background: linear-gradient(
+		to bottom,
+		var(--GRADIENT-LSLATE-BLUE) 0%,
+		var(--GRADIENT-LROYAL-BLUE) 100%
+	);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 625px) {
+	.main-card {
+		width: 100vw;
+		height: 100%;
+		margin: 0;
+		flex-direction: column;
+	}
+
+	.left-wing {
+		border-radius: 0 0 1.5rem 1.5rem;
+	}
+}
+
+/* % and vh are may be different in mobile view */
