@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Interactive rating component</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<!-- Rating state start -->
+		<main class="main-card">
+			<figure class="star-icon-circle">
+				<img class="icon-star" src="images/icon-star.svg" alt="Icon Star" />
+			</figure>
+			<h1 class="main-title">How did we do?</h1>
+			<p class="description">
+				Please let us know how we did with your support request. All feedback is
+				appreciated to help us improve our offering!
+			</p>
+			<section class="rating-options">
+				<button class="rating-button">1</button>
+				<button class="rating-button">2</button>
+				<button class="rating-button">3</button>
+				<button class="rating-button">4</button>
+				<button class="rating-button">5</button>
+			</section>
+			<button class="submit-button">SUBMIT</button>
+		</main>
+		<!-- Rating state end -->
+
+		<!-- Thank you state start -->
+		<main class="thanku-main-card">
+			<figure class="thanku-img-figure">
+				<img
+					src="images/illustration-thank-you.svg"
+					alt="Thank you image"
+					class="thanku-img"
+				/>
+			</figure>
+			<section class="clicked-option-title-section">
+				<p class="clicked-option-title">You selected out of 5</p>
+			</section>
+			<h1 class="thanku-title">Thank you!</h1>
+			<p class="thanku-description">
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don’t hesitate to get in touch!
+			</p>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by TheKatarius.
+		</div>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--COLOR-ORANGE: hsl(25, 97%, 53%);
+	--COLOR-WHITE: hsl(0, 0%, 100%);
+	--COLOR-LGRAY: hsl(217, 12%, 63%);
+	--COLOR-MGRAY: hsl(216, 12%, 54%);
+	--COLOR-DBLUE: hsl(213, 19%, 18%);
+	--COLOR-VDBLUE: hsl(216, 12%, 8%);
+
+	/* FONTS */
+	--FS: 15px;
+}
+
+body {
+	background-color: var(--COLOR-VDBLUE);
+	height: 100vh;
+	font-size: var(--FS);
+	font-family: "Overpass", sans-serif;
+	overflow-x: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-card,
+.thanku-main-card {
+	width: 400px;
+	height: 350px;
+	background: linear-gradient(
+		to bottom,
+		hsl(213, 19%, 18%) 0%,
+		hsl(213, 19%, 18%, 0.2) 100%
+	);
+	border-radius: 1rem;
+	padding: 30px;
+}
+
+.star-icon-circle {
+	width: 40px;
+	height: 40px;
+	background-color: hsl(213, 19%, 25%);
+	border-radius: 50%;
+	margin-bottom: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-title,
+.thanku-title {
+	color: var(--COLOR-WHITE);
+	margin-bottom: 5px;
+}
+
+.description,
+.thanku-description {
+	color: var(--COLOR-MGRAY);
+	margin-bottom: 45px;
+}
+
+.rating-options {
+	width: 100%;
+	height: 47px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rating-button {
+	background-color: var(--COLOR-DBLUE);
+	border: none;
+	color: var(--COLOR-LGRAY);
+	outline: none;
+	border-radius: 50%;
+	font-weight: 900;
+	width: 47px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.button-clicked {
+	background-color: var(--COLOR-ORANGE); /* Color after the button is clicked */
+	color: var(--COLOR-WHITE);
+}
+
+.rating-button:not(.button-clicked):hover {
+	cursor: pointer;
+	background-color: var(--COLOR-LGRAY);
+	color: var(--COLOR-WHITE);
+}
+
+.submit-button {
+	width: 100%;
+	height: 40px;
+	color: var(--COLOR-WHITE);
+	background-color: var(--COLOR-ORANGE);
+	border: none;
+	outline: none;
+	border-radius: 1.5rem;
+	font-weight: 900;
+}
+
+.submit-button:hover {
+	cursor: pointer;
+	background-color: var(--COLOR-WHITE);
+	color: var(--COLOR-ORANGE);
+}
+
+.attribution {
+	color: var(--COLOR-WHITE);
+}
+
+.thanku-main-card {
+	display: none;
+}
+
+.clicked-option-title-section {
+	background-color: var(--COLOR-DBLUE);
+	width: 200px;
+	margin: 15px 0 25px 0;
+	padding: 8px 0 5px 0;
+	border-radius: 1.5rem;
+	color: var(--COLOR-ORANGE);
+	font-weight: 900;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thanku-description {
+	text-align: center;
+	line-height: 23px;
+}
