@@ -21,9 +21,9 @@
 
 body {
 	background-color: var(--COLOR-VDBLUE);
-	height: 100vh;
 	font-size: var(--FS);
 	font-family: "Overpass", sans-serif;
+	height: 100vh;
 	overflow-x: hidden;
 
 	display: flex;
@@ -34,22 +34,23 @@ body {
 
 .main-card,
 .thanku-main-card {
-	width: 400px;
-	height: 350px;
 	background: linear-gradient(
 		to bottom,
 		hsl(213, 19%, 18%) 0%,
 		hsl(213, 19%, 18%, 0.2) 100%
 	);
 	border-radius: 1rem;
+	width: 80vw;
+	max-width: 400px;
+	height: 350px;
 	padding: 30px;
 }
 
 .star-icon-circle {
-	width: 40px;
-	height: 40px;
 	background-color: hsl(213, 19%, 25%);
 	border-radius: 50%;
+	width: 40px;
+	height: 40px;
 	margin-bottom: 20px;
 
 	display: flex;
@@ -72,6 +73,7 @@ body {
 .rating-options {
 	width: 100%;
 	height: 47px;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -80,12 +82,13 @@ body {
 .rating-button {
 	background-color: var(--COLOR-DBLUE);
 	border: none;
-	color: var(--COLOR-LGRAY);
-	outline: none;
 	border-radius: 50%;
+	color: var(--COLOR-LGRAY);
 	font-weight: 900;
 	width: 47px;
 	height: 100%;
+	outline: none;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -98,25 +101,25 @@ body {
 }
 
 .rating-button:not(.button-clicked):hover {
-	cursor: pointer;
 	background-color: var(--COLOR-LGRAY);
+	cursor: pointer;
 	color: var(--COLOR-WHITE);
 }
 
 .submit-button {
-	width: 100%;
-	height: 40px;
-	color: var(--COLOR-WHITE);
 	background-color: var(--COLOR-ORANGE);
 	border: none;
-	outline: none;
 	border-radius: 1.5rem;
+	color: var(--COLOR-WHITE);
 	font-weight: 900;
+	width: 100%;
+	height: 40px;
+	outline: none;
 }
 
 .submit-button:hover {
-	cursor: pointer;
 	background-color: var(--COLOR-WHITE);
+	cursor: pointer;
 	color: var(--COLOR-ORANGE);
 }
 
@@ -130,12 +133,12 @@ body {
 
 .clicked-option-title-section {
 	background-color: var(--COLOR-DBLUE);
-	width: 200px;
-	margin: 15px 0 25px 0;
-	padding: 8px 0 5px 0;
 	border-radius: 1.5rem;
 	color: var(--COLOR-ORANGE);
 	font-weight: 900;
+	margin: 15px 0 25px 0;
+	padding: 8px 0 5px 0;
+	width: 200px;
 
 	display: flex;
 	justify-content: center;
@@ -143,6 +146,13 @@ body {
 }
 
 .thanku-description {
-	text-align: center;
 	line-height: 23px;
+	text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+	.main-card,
+	.thanku-main-card {
+		height: 370px;
+	}
 }
