@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--COLOR-BRIGHT-ORANGE: hsl(31, 97%, 58%);
+	--COLOR-DCYAN: hsl(184, 100%, 22%);
+	--COLOR-VDCYAN: hsl(179, 100%, 13%);
+	--COLOR-TRANSPARENT-WHITE: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+	--COLOR-VLGRAY: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+	/* FONTS */
+	--FS: 15px;
+}
+
+body {
+	background-color: var(--COLOR-TRANSPARENT-WHITE);
+	font-size: var(--FS);
+	font-family: "Lexend Deca", sans-serif;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-card {
+	width: 840px;
+	height: auto;
+
+	display: flex;
+}
+
+.sedan-section {
+	background-color: var(--COLOR-BRIGHT-ORANGE);
+	border-radius: 1rem 0 0 1rem;
+	padding: 30px;
+}
+
+.sedan-title {
+	color: var(--COLOR-VLGRAY);
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 32px;
+	margin: 25px 0;
+}
+
+.sedan-description {
+	color: var(--COLOR-TRANSPARENT-WHITE);
+	line-height: 25px;
+}
+
+.suv-section {
+	background-color: var(--COLOR-DCYAN);
+	padding: 30px;
+}
+
+.suv-title {
+	color: var(--COLOR-VLGRAY);
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 32px;
+	margin: 25px 0;
+}
+
+.suv-description {
+	color: var(--COLOR-TRANSPARENT-WHITE);
+	line-height: 25px;
+}
+
+.luxury-section {
+	background-color: var(--COLOR-VDCYAN);
+	border-radius: 0 1rem 1rem 0;
+	padding: 30px;
+}
+
+.luxury-title {
+	color: var(--COLOR-VLGRAY);
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 32px;
+	margin: 25px 0;
+}
+
+.luxury-description {
+	color: var(--COLOR-TRANSPARENT-WHITE);
+	line-height: 25px;
+}
+
+/* Margin - auto - center horizontally */
+.learn-more-button {
+	border: 3px solid var(--COLOR-TRANSPARENT-WHITE);
+	border-radius: 3rem;
+	background-color: hsl(0, 0%, 0%, 0);
+	color: var(--COLOR-TRANSPARENT-WHITE);
+	width: 150px;
+	height: 45px;
+	display: block;
+	margin: 70px 0 20px;
+	outline: none;
+}
+
+.learn-more-button:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+	.main-card {
+		flex-direction: column;
+		width: 300px;
+	}
+
+	.sedan-section {
+		border-radius: 1rem 1rem 0 0;
+	}
+
+	.suv-section {
+		border-radius: 0;
+	}
+
+	.luxury-section {
+		border-radius: 0 0 1rem 1rem;
+	}
+}
