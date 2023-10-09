@@ -1,0 +1,126 @@
+/* subordinate the dimensions of images from themselves */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* NEUTCOLORSRAL COLORS */
+	--COLORS-VDSATURATED-BLUE: hsl(238, 29%, 16%);
+	--COLORS-SOFT-RED: hsl(14, 88%, 65%);
+
+	/* BACKGROUND COLORS */
+	--COLORS-SOFT-VIOLET: hsl(273, 75%, 66%);
+	--COLORS-SOFT-BLUE: hsl(240, 73%, 65%);
+
+	/* TEXT COLORS */
+	--COLORS-VDGRAYISH-BLUE: hsl(237, 12%, 33%);
+	--COLORS-DGRAYISH-BLUE: hsl(240, 6%, 50%);
+
+	/* DIVIDERS COLORS */
+	--COLORS-LGRAYISH-BLUE: hsl(240, 5%, 91%);
+
+	/* FONTS */
+	--FS: 12px;
+}
+
+body {
+	background: linear-gradient(
+		to bottom,
+		var(--COLORS-SOFT-VIOLET) 0%,
+		var(--COLORS-SOFT-BLUE) 100%
+	);
+	min-height: 100vh;
+	font-size: var(--FS);
+	font-family: "Kumbh Sans", sans-serif;
+	overflow-x: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-card {
+	background-color: var(--COLORS-LGRAYISH-BLUE);
+	max-width: 1000px;
+	width: 90vw;
+	height: 600px;
+	position: relative;
+
+	display: flex;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+	width: inherit;
+	height: inherit;
+}
+
+.box-image {
+	position: absolute;
+	top: 36%;
+	left: -11.5%;
+	width: 200px;
+	height: auto;
+	z-index: 2;
+}
+
+.woman-image-desktop {
+	position: absolute;
+	top: 10%;
+	left: -9%;
+	width: 450px;
+	height: auto;
+	z-index: 1;
+}
+
+.woman-image-background-desktop {
+	position: absolute;
+	width: 800px;
+	height: auto;
+	top: -52%;
+	left: -51%;
+}
+
+.right-wing {
+	margin: 40px 60px;
+	position: absolute;
+	top: 0%;
+	left: 47%;
+}
+
+.question-section {
+	width: 325px;
+}
+
+.faq-title {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+.question-title {
+	color: var(--COLORS-VDGRAYISH-BLUE);
+	font-weight: 400;
+}
+
+.faq-title-question-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.hidden-text-article {
+	display: none;
+	color: var(--COLORS-DGRAYISH-BLUE);
+}
+
+hr {
+	margin: 20px 0;
+}
