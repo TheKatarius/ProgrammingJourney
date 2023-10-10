@@ -26,6 +26,9 @@
 
 	/* FONTS */
 	--FS: 12px;
+
+	/* SIZES */
+	--MAIN-CARD-WIDTH: 900;
 }
 
 body {
@@ -47,36 +50,36 @@ body {
 
 .main-card {
 	background-color: var(--COLORS-LGRAYISH-BLUE);
-	max-width: 1000px;
-	width: 90vw;
-	height: 600px;
+	border-radius: 1.2rem;
+	max-width: 850px;
+	height: 500px;
+	width: 95vw;
 	position: relative;
-
 	display: flex;
 }
 
 .container {
+	height: inherit;
+	width: inherit;
 	position: relative;
 	overflow: hidden;
-	width: inherit;
-	height: inherit;
 }
 
 .box-image {
+	height: auto;
 	position: absolute;
-	top: 36%;
+	top: 34%;
 	left: -11.5%;
 	width: 200px;
-	height: auto;
 	z-index: 2;
 }
 
 .woman-image-desktop {
+	height: auto;
+	width: 450px;
 	position: absolute;
 	top: 10%;
 	left: -9%;
-	width: 450px;
-	height: auto;
 	z-index: 1;
 }
 
@@ -84,12 +87,12 @@ body {
 	position: absolute;
 	width: 800px;
 	height: auto;
-	top: -52%;
-	left: -51%;
+	top: -220px;
+	left: -425px;
 }
 
-.right-wing {
-	margin: 40px 60px;
+.faq-questions-section {
+	margin: 60px;
 	position: absolute;
 	top: 0%;
 	left: 47%;
@@ -110,17 +113,77 @@ body {
 }
 
 .faq-title-question-container {
+	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 10px;
 }
 
 .hidden-text-article {
-	display: none;
 	color: var(--COLORS-DGRAYISH-BLUE);
+	display: none;
 }
 
 hr {
 	margin: 20px 0;
+}
+
+.arrow-button-image:hover {
+	cursor: pointer;
+}
+
+.woman-image-background-mobile,
+.woman-image-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
+	.main-card {
+		margin: 200px 0 100px;
+		width: 350px;
+		height: 550px;
+		/* it has to be, bcs the first time we load the site, it needs to be set */
+	}
+
+	.container {
+		overflow: visible;
+	}
+
+	.woman-image-mobile {
+		width: 300px;
+		position: absolute;
+		top: -5%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.woman-image-background-mobile {
+		width: 300px;
+		position: absolute;
+		top: 70px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.box-image,
+	.woman-image-background-desktop,
+	.woman-image-desktop {
+		display: none;
+	}
+
+	.woman-image-background-mobile,
+	.woman-image-mobile {
+		display: block;
+	}
+
+	.faq-title {
+		font-size: 32px;
+		transform: translate(40%);
+	}
+
+	.faq-questions-section {
+		margin: 0px 60px;
+		top: 150px;
+		left: -14%;
+	}
 }
