@@ -150,6 +150,10 @@ body {
 	color: var(--COLOR-GRAISH-BLUE);
 }
 
+.share-icon-white {
+	display: none;
+}
+
 @media screen and (max-width: 45em) {
 	.main-card {
 		display: flex;
