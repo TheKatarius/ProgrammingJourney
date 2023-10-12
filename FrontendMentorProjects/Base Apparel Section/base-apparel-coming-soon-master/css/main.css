@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--COLOR-DESATURATED-RED: hsl(0, 36%, 70%);
+	--COLOR-SOFT-RED: hsl(0, 93%, 68%);
+	--COLOR-DGRAYISH-RED: hsl(0, 6%, 24%);
+
+	/* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%) */
+	/* - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+	/* FONTS */
+	--FS: 16px;
+}
+
+body {
+	font-size: var(--FS);
+	font-family: "Josefin Sans", sans-serif;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.main-card {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+}
+
+.main-img {
+	width: auto;
+	height: 100vh;
+}
+
+.left-wing-section {
+	padding: 8% 10%;
+	background-image: url(../images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-title {
+	font-size: 4.5rem;
+	letter-spacing: 15px;
+	margin: 100px 0 30px;
+	text-transform: uppercase;
+	color: var(--COLOR-DGRAYISH-RED);
+}
+
+.were-string {
+	font-weight: 300;
+	color: var(--COLOR-DESATURATED-RED);
+}
+
+.description {
+	color: var(--COLOR-DESATURATED-RED);
+	line-height: 1.5rem;
+}
+
+.form {
+	margin-top: 40px;
+	position: relative;
+}
+
+.email-form-input {
+	width: 100%;
+	height: auto;
+	padding: 15px 25px;
+	border-radius: 2rem;
+	border: 1px solid var(--COLOR-DESATURATED-RED);
+	outline: none;
+	/* we need to set outline to none, bcs when i type, the borders change its color to black defaulty */
+	opacity: 0.7;
+}
+
+.email-form-input::placeholder {
+	color: var(--COLOR-DESATURATED-RED);
+}
+
+.icon-error-figure {
+	display: none;
+	position: absolute;
+	top: 30%;
+	left: calc(100% - 90px - 35px);
+}
+
+.icon-error {
+	width: 20px;
+}
+
+.submit-img-figure {
+	background: linear-gradient(
+		135deg,
+		hsl(0, 80%, 86%) 50%,
+		hsl(0, 74%, 74%) 100%
+	);
+	position: absolute;
+	top: 0;
+	left: calc(100% - 90px);
+	width: 90px;
+	height: 100%;
+	border-radius: 2rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.submit-img-figure {
+	cursor: pointer;
+}
