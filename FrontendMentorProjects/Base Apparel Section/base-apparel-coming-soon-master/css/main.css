@@ -23,7 +23,7 @@ body {
 	font-size: var(--FS);
 	font-family: "Josefin Sans", sans-serif;
 	min-height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .main-card {
@@ -36,6 +36,10 @@ body {
 	height: 100vh;
 }
 
+.hero-mobile-figure {
+	display: none;
+}
+
 .left-wing-section {
 	padding: 8% 10%;
 	background-image: url(../images/bg-pattern-desktop.svg);
@@ -44,7 +48,7 @@ body {
 }
 
 .main-title {
-	font-size: 4.5rem;
+	font-size: 3rem;
 	letter-spacing: 15px;
 	margin: 100px 0 30px;
 	text-transform: uppercase;
@@ -112,4 +116,59 @@ body {
 
 .submit-img-figure {
 	cursor: pointer;
+}
+
+.error-message {
+	display: none;
+	color: var(--COLOR-SOFT-RED);
+	position: absolute;
+	bottom: -30px;
+	left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+	.main-card {
+		position: relative;
+	}
+
+	.main-img-figure {
+		display: none;
+	}
+
+	.hero-mobile-figure {
+		display: block;
+		margin-top: 30px;
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+	}
+
+	.hero-mobile-img {
+		width: 100%;
+		height: 250px;
+	}
+
+	.left-wing-section {
+		width: 100vw;
+		padding: 8% 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main-title {
+		text-align: center;
+		font-size: 32px;
+		margin: 50px 0 30px;
+	}
+
+	.description {
+		margin: 0 10%;
+		text-align: center;
+	}
+
+	.form {
+		width: 80%;
+		margin-bottom: 100px;
+	}
 }
