@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--COLOR-PURPLE: hsl(259, 100%, 65%);
+	--COLOR-LRED: hsl(0, 100%, 67%);
+	--COLOR-WHITE: hsl(0, 0%, 100%);
+	--COLOR-OFF-WHITE: hsl(0, 0%, 94%);
+	--COLOR-LGREY: hsl(0, 0%, 86%);
+	--COLOR-SMOKEY-GREY: hsl(0, 1%, 44%);
+	--COLOR-OFF-BLACK: hsl(0, 0%, 8%);
+
+	/* FONTS */
+	--FS: 32px;
+}
+
+body {
+	background-color: var(--COLOR-OFF-WHITE);
+	min-height: 100vh;
+	font-size: var(--FS);
+	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-card {
+	max-width: 500px;
+	width: 80%;
+	background-color: var(--COLOR-WHITE);
+	padding: 40px;
+}
+
+.select-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.day-month-year-section {
+	display: flex;
+	flex-direction: column;
+	width: 28%;
+	margin-bottom: 20px;
+}
+
+.label-string {
+	font-size: 13px;
+	letter-spacing: 4px;
+	color: var(--COLOR-SMOKEY-GREY);
+}
+
+.date-input {
+	height: 45px;
+	border-radius: 0.3rem;
+	border: 1px solid var(--COLOR-LGREY);
+	padding: 10px 15px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.date-input:focus {
+	border: 1px solid var(--COLOR-OFF-BLACK);
+}

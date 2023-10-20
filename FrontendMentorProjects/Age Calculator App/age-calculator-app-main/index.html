@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Age calculator app</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<main class="main-card">
+			<section class="select-date-section">
+				<form class="select-form">
+					<section class="day-month-year-section">
+						<label for="day" class="label-string">DAY</label>
+						<input type="text" id="day" name="day" class="date-input" />
+					</section>
+					<section class="day-month-year-section">
+						<label for="month" class="label-string">MONTH</label>
+						<input type="text" id="month" name="month" class="date-input" />
+					</section>
+					<section class="day-month-year-section">
+						<label for="year" class="label-string">YEAR</label>
+						<input type="text" id="year" name="year" class="date-input" />
+					</section>
+				</form>
+			</section>
+			<button class="convert-button">
+				<img
+					src="assets/images/icon-arrow.svg"
+					alt="Icon Arrow Image"
+					class="convert-button-img"
+				/>
+			</button>
+			<section class="display-time">
+				<p class="date-string">
+					<span class="number-date-string">--</span> years
+				</p>
+				<p class="date-string">
+					<span class="number-date-string">--</span> months
+				</p>
+				<p class="date-string">
+					<span class="number-date-string">--</span> days
+				</p>
+			</section>
+		</main>
+		<!-- <div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div> -->
+	</body>
+</html>
