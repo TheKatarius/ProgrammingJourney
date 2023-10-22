@@ -22,34 +22,61 @@
 				<form class="select-form">
 					<section class="day-month-year-section">
 						<label for="day" class="label-string">DAY</label>
-						<input type="text" id="day" name="day" class="date-input" />
+						<input
+							type="text"
+							id="day"
+							name="day"
+							class="date-input"
+							placeholder="DD"
+						/>
+						<p class="error-message">Must be a valid date</p>
 					</section>
 					<section class="day-month-year-section">
 						<label for="month" class="label-string">MONTH</label>
-						<input type="text" id="month" name="month" class="date-input" />
+						<input
+							type="text"
+							id="month"
+							name="month"
+							class="date-input"
+							placeholder="MM"
+						/>
+						<p class="error-message">Must be a valid date</p>
 					</section>
 					<section class="day-month-year-section">
 						<label for="year" class="label-string">YEAR</label>
-						<input type="text" id="year" name="year" class="date-input" />
+						<input
+							type="text"
+							id="year"
+							name="year"
+							class="date-input"
+							placeholder="YYYY"
+						/>
+						<p class="error-message">Must be a valid date</p>
 					</section>
 				</form>
 			</section>
-			<button class="convert-button">
-				<img
-					src="assets/images/icon-arrow.svg"
-					alt="Icon Arrow Image"
-					class="convert-button-img"
-				/>
-			</button>
+			<section class="hr-section">
+				<hr />
+				<figure class="arrow-img-figure">
+					<img
+						src="assets/images/icon-arrow.svg"
+						alt="Icon Arrow Image"
+						class="arrow-img"
+						width="46"
+						height="44"
+					/>
+				</figure>
+			</section>
+
 			<section class="display-time">
 				<p class="date-string">
-					<span class="number-date-string">--</span> years
+					<span class="number-date-string">- -</span> years
 				</p>
 				<p class="date-string">
-					<span class="number-date-string">--</span> months
+					<span class="number-date-string">- -</span> months
 				</p>
 				<p class="date-string">
-					<span class="number-date-string">--</span> days
+					<span class="number-date-string">- -</span> days
 				</p>
 			</section>
 		</main>

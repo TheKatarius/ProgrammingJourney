@@ -33,39 +33,131 @@ body {
 }
 
 .main-card {
+	background-color: var(--COLOR-WHITE);
+	border-radius: 1rem 1rem 8rem 1rem;
+	padding: 30px;
 	max-width: 500px;
 	width: 80%;
-	background-color: var(--COLOR-WHITE);
-	padding: 40px;
 }
 
 .select-form {
+	margin-bottom: 10px;
+	width: 80%;
+
 	display: flex;
 	justify-content: space-between;
 }
 
 .day-month-year-section {
+	margin-bottom: 10px;
+	width: 30%;
+
 	display: flex;
 	flex-direction: column;
-	width: 28%;
-	margin-bottom: 20px;
 }
 
 .label-string {
-	font-size: 13px;
-	letter-spacing: 4px;
 	color: var(--COLOR-SMOKEY-GREY);
+	font-size: 10px;
+	letter-spacing: 3px;
 }
 
 .date-input {
-	height: 45px;
-	border-radius: 0.3rem;
 	border: 1px solid var(--COLOR-LGREY);
-	padding: 10px 15px;
+	border-radius: 0.3rem;
 	font-size: 24px;
 	font-weight: 700;
+	height: 45px;
+	padding: 10px 15px;
 }
 
 .date-input:focus {
-	border: 1px solid var(--COLOR-OFF-BLACK);
+	outline: none;
+}
+
+.error-message {
+	color: var(--COLOR-LRED);
+	font-size: 9px;
+	font-style: italic;
+	visibility: hidden;
+}
+
+.hr-section {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+hr {
+	background-color: var(--COLOR-LGREY);
+	border: none;
+	height: 1px;
+}
+
+.arrow-img-figure {
+	background-color: var(--COLOR-OFF-BLACK);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+
+	position: absolute;
+	top: -25px;
+	/* Requires spaces around operators */
+	left: calc(100% - 50px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow-img-figure:hover {
+	background-color: var(--COLOR-PURPLE);
+	cursor: pointer;
+}
+
+.arrow-img {
+	width: 50%;
+}
+
+.date-string {
+	font-size: 50px;
+	font-style: italic;
+	font-weight: 800;
+	line-height: 55px;
+}
+
+.number-date-string {
+	color: var(--COLOR-PURPLE);
+}
+
+.error {
+	border: 1px solid red;
+	color: red;
+}
+
+@media screen and (max-width: 530px) {
+	.main-card {
+		padding: 30px 15px;
+	}
+
+	.select-form {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.date-input {
+		font-size: 20px;
+		padding: 10px 10px;
+	}
+
+	.hr-section {
+		margin-bottom: 50px;
+	}
+
+	.arrow-img-figure {
+		left: calc(50% - 25px);
+	}
+
+	.date-string {
+		font-size: 45px;
+	}
 }
