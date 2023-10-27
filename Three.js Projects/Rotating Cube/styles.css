@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+.portfolio-section {
+	display: flex;
+	overflow-x: auto;
+}
+
+.card {
+	flex: 0 0 auto;
+	width: 200px;
+	margin: 10px;
+}
