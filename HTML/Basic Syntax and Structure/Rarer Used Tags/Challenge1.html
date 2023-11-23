@@ -1,0 +1,106 @@
+<!-- Detailed Guidelines and Structure
+
+    Form Initialization:
+        Start by defining the <form> element. This will be the container for all your form inputs and sections.
+        Within this form, you will create multiple sections, each delineated by a <fieldset> element.
+
+    Section 1 - Personal Information:
+        Use the first <fieldset> to gather personal details.
+        Include a <legend> that reads "Personal Information" or something similarly descriptive.
+        Within this section, add input fields for name, email, and phone number. Each field should be accompanied by a <label>.
+        The input fields should have appropriate type attributes (like text, email, tel).
+
+    Section 2 - Course Preferences:
+        In the second <fieldset>, focus on course-specific preferences.
+        The <legend> for this section could be "Course Preferences".
+        Include options to select course topics (use <select> and <option>), preferred session times (could be checkboxes), and any special accommodations needed.
+
+    Section 3 - Payment Details:
+        The third <fieldset> is for payment information.
+        Label it with a <legend> saying "Payment Details".
+        This section should include fields for credit card information, billing address, and any promo codes. Ensure to use the correct input types for security, like type="password" for sensitive information.
+
+    Complexity and Cognitive Challenge:
+        To make this task more challenging, integrate a mix of input types (text, radio buttons, checkboxes, date pickers) throughout the form.
+        Additionally, add a small JavaScript functionality that dynamically updates a part of the form based on user input (like showing/hiding a section based on a checkbox).
+        Include an "Other" option in relevant sections, which when selected, reveals an additional input field for the user to provide custom information.
+
+    Final Touches:
+        Conclude the form with a submit button.
+        Add a small section with a link to the terms and conditions and a checkbox for the user to acknowledge them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Personal Info:</legend>
+				<label for="fname">Name: </label>
+				<input type="text" id="fname" name="fname" />
+
+				<label for="email">E-mail: </label>
+				<input type="email" id="email" name="email" />
+
+				<label for="phone-number">Phone Number: </label>
+				<input type="tel" id="phone-number" name="phone-number" />
+			</fieldset>
+
+			<fieldset>
+				<legend>Course Preferences:</legend>
+				<label for="courses">Select Courses: </label>
+				<select name="courses" id="courses" multiple size="5">
+					<optgroup label="Coffees">
+						<option value="latte coffee" selected>Latte</option>
+						<option value="espresso coffee">Espresso</option>
+					</optgroup>
+
+					<optgroup label="Meat">
+						<option value="pork meat" selected>Pork</option>
+						<option value="beef meat">Beef</option>
+						<option value="bacon meat">Bacon</option>
+						<option value="steak meat">Steak</option>
+					</optgroup>
+
+					<optgroup label="Soup">
+						<option value="tomato soup" selected>Tomato Soup</option>
+						<option value="cucumber soup">Cucumber Soup</option>
+						<option value="fish soup">Fish Soup</option>
+					</optgroup>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend>Payment Details:</legend>
+				<label for="card-info">Card Information: </label>
+				<input type="number" id="card-info" name="card-info" />
+
+				<label for="billing-address">Billing Address: </label>
+				<input type="text" id="billing-address" name="billing-address" />
+
+				<label for="promo-code">Promo Codes: </label>
+				<input type="text" id="promo-code" name="promo-code" />
+			</fieldset>
+
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
+<!--
+Link label to input:
+
+    The for attribute in each <label> should match the id of the corresponding <input>. This enhances accessibility by ensuring that clicking the label focuses the associated input.
+    Example: <label for="name">Name:</label> <input type="text" id="name">
+
+Form Action Attribute:
+
+    The action attribute of the <form> is empty. While this might be intentional for a mock-up, in a real scenario, it should point to a server-side script that processes the form data.
+
+Buttons created with the BUTTON element function just like buttons created with the INPUT element, but they offer richer rendering possibilities: the BUTTON element may have content. For example, a BUTTON element that contains an image functions like and may resemble an INPUT element whose type is set to "image", but the BUTTON element type allows content.
+
+Just FYI you don't have to use type="submit" with button, as the default for type is submit.
+-->

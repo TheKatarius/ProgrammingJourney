@@ -1,0 +1,59 @@
+<!-- Challenge 1: Basic Table Creation
+
+Objective: Create a simple HTML table with headers and data.
+
+    Use the <table> tag to define the table.
+    Create a row with table headers using the <th> tag inside a <tr> element.
+    Add at least three rows of data using the <td> tag within <tr> elements.
+    Each row should represent data like "Month" and "Expense" for a simple budget table. -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Challenge 1</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<table>
+			<caption>
+				My Daily Routine
+			</caption>
+			<tr>
+				<th scope="col">&nbsp;</th>
+				<th id="time" scope="col">Time</th>
+				<th id="action" scope="col">Action</th>
+			</tr>
+			<tr>
+				<th id="morning" scope="row">Morning</th>
+				<td headers="time morning">
+					<time datetime="08:00">8am</time> - <time datetime="12:00">12pm</time>
+				</td>
+				<td headers="action morning">Coffee</td>
+			</tr>
+			<tr>
+				<th id="afternoon" scope="row">Afternoon</th>
+				<td headers="time afternoon">
+					<time datetime="15:00">3pm</time> - <time datetime="18:00">6pm</time>
+				</td>
+				<td headers="action afternoon">Coding</td>
+			</tr>
+			<tr>
+				<th id="evening" scope="row">Evening</th>
+				<td headers="time evening">
+					<time datetime="19:00">7pm</time> - <time datetime="21:00">9pm</time>
+				</td>
+				<td headers="action evening">Eating</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<!-- Add Table Headers for Columns:
+    Currently, the table uses a <th> element with scope="row", which is great for row headers. However, it would be beneficial to add column headers as well, especially if the table has more than one row or column. This improves readability and accessibility.
+
+Use id and headers Attributes Correctly:
+		The headers attribute in the <td> tag is supposed to refer to the id of the corresponding <th> element, but in the provided code, there's no id attribute in the <th> tag.
+		Add an id to the <th> tag that matches the value in the headers attribute of the <td> tag. This linkage is important for screen readers to associate data cells with the correct headers.
+
+Change datetime="8:00" to datetime="08:00" and datetime="12:00" to datetime="12:00". This ensures correct parsing by user agents. -->

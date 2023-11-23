@@ -1,0 +1,91 @@
+<!-- Detailed Instructions
+
+    Incorporating a Semantic Header:
+        Create a <header> element at the top of your page.
+        The header should encapsulate elements like the site title or logo and potentially a brief introduction or tagline.
+        This is the face of your webpage; it should clearly indicate what your site or page is about.
+
+    Intuitive Navigation with <nav>:
+        Craft a <nav> element, typically placed within your <header> or right below it.
+        Populate it with at least four hyperlinks (<a> tags). These links could be dummy links (href="#") but should represent typical sections of a website like Home, About Us, Services, Contact.
+        Focus on making your navigation intuitive and user-friendly.
+
+    Main Content Area with <main> and <article>:
+        Use a <main> element to define the central content of your webpage.
+        Within <main>, insert at least two <article> elements. Each article should represent an independent, self-contained portion of content - imagine them as blog posts or news articles.
+        Every <article> should have its own <header> and <footer>. The header could include a title (using <h1> to <h6>) and maybe a date or author name, while the footer might contain tags or share buttons.
+
+    Supplementary Content with <aside>:
+        Next to your main content, add an <aside> section.
+        The content here should be related but not essential to the main content. Think of things like author bios, related links, advertisements, or a sidebar with additional navigation links.
+
+    Concluding with a <footer>:
+        Design a <footer> for your page.
+        It should include information like copyright notices, contact information, or links to privacy policies and terms of service. -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Challenge 1</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<header>Header</header>
+		<nav>
+			<a href="#mainSection" title="Discover more in main section"
+				>Go to Main Section</a
+			>
+			<a
+				href="https://youtube.com"
+				title="More about this topic on Youtube"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Go to Youtube</a
+			>
+			<a href="mailto:someone@example.com">Email us</a>
+			<a href="dataChallenge1.txt" download>Download Text File</a>
+		</nav>
+		<main id="mainSection">
+			<article>
+				<h2>First article</h2>
+			</article>
+			<article>
+				<h2>Second Article</h2>
+			</article>
+			<aside></aside>
+		</main>
+		<footer id="footerSection"></footer>
+	</body>
+</html>
+
+<!--
+    _blank - new tab, _self(default) - same tab, _parent, _top - same tab in this case
+    Hyperlink should always have
+
+    Hyperlinks:
+        Title Attribute:
+    Although optional, adding a title attribute can provide additional context, especially when the link text is not self-explanatory.
+    Example: <a href="https://www.example.com" title="Discover our range of web development services">Our Services</a>.
+
+        Target Attribute for External Links:
+
+    Use target="_blank" to open external links in a new tab or window, but this should be used judiciously as it can take control away from the user.
+    Example: <a href="https://www.externalwebsite.com" target="_blank">Visit External Website</a>.
+
+        Rel Attribute for External Links:
+
+    When using target="_blank", also include rel="noopener noreferrer" for security and performance reasons.
+    Example: <a href="https://www.externalwebsite.com" target="_blank" rel="noopener noreferrer">Visit External Website</a>.
+
+        Using Mailto for Email Addresses:
+
+    For email links, use mailto: followed by the email address.
+    Example: <a href="mailto:someone@example.com">Email Us</a>.
+
+Linking to a Downloadable File:
+
+    If linking to a file (like a PDF), inform the user that clicking the link will download a file.
+    Example: <a href="path/to/file.pdf" download>Download Our Brochure (PDF)</a>.
+
+ -->
