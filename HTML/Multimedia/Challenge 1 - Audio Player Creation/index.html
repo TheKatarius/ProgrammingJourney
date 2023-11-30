@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Audio Player Creation</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<figure class="audio-player1">
+			<audio controls autoplay muted loop src="bbc_falcon_sound.mp3"></audio>
+		</figure>
+
+		<figure class="audio-player2">
+			<audio controls autoplay muted loop>
+				<source src="bbc_falcon_sound.mp3" type="audio/mpeg" />
+				<source src="bbc_falcon_sound.wav" type="audio/wav" />
+				Your browser does not support the audio element.
+			</audio>
+		</figure>
+	</body>
+</html>
+
+<!--
+    use controls attribute to display the audio on page
+    Attribute Experimentation:
+
+    autoplay: Makes the audio start automatically upon page load. However, remember that modern browsers might restrict this to prevent unsolicited audio play.
+    loop: This creates an endless loop of the audio track. It's a test of seamless playback.
+    muted: Starts the audio in a muted state. It's particularly intriguing to combine this with autoplay.
+
+    we can add many extensions of the same audio when the browser does not support one of those, it is good practice to add type attribute then
+    good practice - create separated folder for audio files in a project
+    good practice - add error string within audio element under the sources(for better look), when the audio is not supported
+    when there is no audio with specific path, then the controller changes its color to grey
+-->

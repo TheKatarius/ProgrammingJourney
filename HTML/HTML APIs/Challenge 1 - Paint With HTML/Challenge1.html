@@ -1,0 +1,86 @@
+<!-- Challenge 1: Create an Interactive Canvas Drawing
+
+Objective: To create an interactive canvas element where users can draw with their mouse.
+
+    Set up a canvas element with a predefined width and height.
+    Write JavaScript functions to detect mouse events on the canvas and draw a line following the mouse cursor.
+    Implement a color picker that changes the stroke color of the drawing.\ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Draw With HTML API</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<canvas
+			id="drawingWindow"
+			width="1200"
+			height="600"
+			style="border: 1px solid red"
+		>
+			Your browser does not support the HTML canvas tag.</canvas
+		>
+		<fieldset>
+			<legend>Change Properties</legend>
+			<label for="chooseColor">Change Color: </label>
+			<input type="color" id="chooseColor" value="#FF0000" />
+
+			<label for="chooseThickness">Change Thickness: </label>
+			<input type="range" id="chooseThickness" value="50" max="100" />
+		</fieldset>
+
+		<script>
+			let canvas = document.querySelector("#drawingWindow");
+			let chosenColor = document.querySelector("#chooseColor");
+			let chosenThickness = document.querySelector("#chooseThickness");
+			let ctx = canvas.getContext("2d");
+
+			let isDrawing = false;
+			let axisX = 0;
+			let axisY = 0;
+
+			ctx.lineJoin = "round";
+			ctx.lineCap = "round";
+
+			function draw(e) {
+				if (!isDrawing) return;
+				ctx.beginPath();
+				ctx.moveTo(axisX, axisY); // Start from - it connnect dots with each other, without it there will be discrete drawings (only dots)
+				ctx.lineTo(e.offsetX, e.offsetY); // Go to - obligatory
+				ctx.stroke(); // display
+				[axisX, axisY] = [e.offsetX, e.offsetY]; // set new values
+			}
+
+			canvas.addEventListener("mousedown", (e) => {
+				isDrawing = true;
+				[axisX, axisY] = [e.offsetX, e.offsetY];
+			});
+
+			canvas.addEventListener("mousemove", draw);
+			canvas.addEventListener("mouseup", () => (isDrawing = false));
+			canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+			chosenColor.addEventListener("change", (e) => {
+				ctx.strokeStyle = e.target.value;
+			});
+
+			chosenThickness.addEventListener("change", (e) => {
+				ctx.lineWidth = e.target.value;
+			});
+		</script>
+	</body>
+</html>
+
+<!--
+    		<input type="color" id="chooseColor" value="#FF0000" />
+            If we want to change color on inputChange then, we need to use type="color", type="text" does not work
+            input value attribute is used for initial values
+
+            chosenColor.addEventListener("change", () => {
+				ctx.strokeStyle = this.value; // Line color
+				console.log(ctx.strokeStyle);
+			});
+            this does not work with arrow function, use chosenColor then, or function (){}
+ -->
