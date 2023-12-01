@@ -1,0 +1,28 @@
+// Color Palette
+$color-black-1: #333333; // Darker shade for text and icons
+$color-black-2: #1a1a1a; // Rich black for backgrounds or headers
+$color-grey-1: #f5f5f5; // Very light grey for background
+$color-grey-2: #cccccc; // Mid grey for borders and lines
+$color-grey-3: #e0e0e0; // Light grey for secondary elements
+$color-blue-1: #0077b5; // Vivid blue for buttons, links, and highlights
+$color-blue-2: #4c9aff; // Sky blue for hover effects
+
+// Fonts
+$font-heading: "Montserrat", sans-serif; // Font for headings
+$font-body: "Open Sans", sans-serif; // Font for body text
+$font-size-heading: 24px; // Standard size for main headings
+$font-size-heading-large: 36px; // Larger size for main headings
+$font-size-body: 16px; // Standard size for body text
+$font-size-body-large: 18px; // Larger size for body text
+
+// Dimensions
+$header-footer-height: 80px; // Standard height for header/footer
+$section-height-standard: 600px; // Standard height for sections
+$section-height-large: 800px; // Larger height for sections
+$padding-horizontal: 20px; // Horizontal padding across the site
+$section-spacing: 50px; // Spacing between sections
+
+// Media Queries Breakpoints (Optional)
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
